@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import InstallAppButton from './InstallAppButton'
 
 const links = [
   { href: '/', label: 'Home' },
@@ -44,7 +45,10 @@ export default function SiteNav() {
             </li>
           ))}
         </ul>
-        <Link href="/contact" className="header-cta" onClick={closeMenu}>Let&apos;s talk <span aria-hidden="true">&rarr;</span></Link>
+        <div className="nav-actions">
+          <InstallAppButton />
+          <Link href="/contact" className="header-cta" onClick={closeMenu}>Let&apos;s talk <span aria-hidden="true">&rarr;</span></Link>
+        </div>
       </nav>
     </header>
   )
