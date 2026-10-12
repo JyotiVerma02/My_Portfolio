@@ -5,6 +5,10 @@ import SiteNav from '../components/SiteNav'
 import SiteFooter from '../components/SiteFooter'
 import PwaRegister from '../components/PwaRegister'
 import CursorGlow from '../components/CursorGlow'
+import { DM_Sans, Manrope } from 'next/font/google'
+
+const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-dm-sans', display: 'swap' })
+const manrope = Manrope({ subsets: ['latin'], variable: '--font-manrope', display: 'swap' })
 
 export const metadata: Metadata = {
   title: 'Jyoti Verma | Frontend Developer',
@@ -24,7 +28,7 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${dmSans.variable} ${manrope.variable}`}>
       <body>
         <div className="ambient ambient-one" aria-hidden="true" />
         <div className="ambient ambient-two" aria-hidden="true" />

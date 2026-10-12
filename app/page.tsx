@@ -15,7 +15,7 @@ export default function Home() {
           <div className="hero-actions"><Link href="/projects" className="btn btn-primary">Explore my work <span aria-hidden="true">↘</span></Link><Link href="/contact" className="text-link">Get in touch <span aria-hidden="true">↗</span></Link></div>
           <div className="hero-stack" aria-label="Core technologies">{['React', 'Next.js', 'TypeScript', 'Tailwind CSS'].map((tech) => <span key={tech}>{tech}</span>)}</div>
         </div>
-        <div className="hero-visual"><div className="portrait-frame"><div className="portrait-inner"><Image src="/Jyoti_image.png" alt="Portrait illustration of Jyoti Verma" width={800} height={1365} priority /></div></div><div className="portrait-note"><span className="note-mark" aria-hidden="true">✳</span><span>Design-minded<br /><strong>developer</strong></span></div><span className="visual-index">PORTFOLIO · FRONTEND</span></div>
+        <div className="hero-visual"><div className="portrait-frame"><div className="portrait-inner"><Image src="/Jyoti_image.webp" alt="Portrait illustration of Jyoti Verma" width={640} height={1138} sizes="(max-width: 540px) 57vw, (max-width: 920px) 250px, 370px" quality={75} preload /></div></div><div className="portrait-note"><span className="note-mark" aria-hidden="true">✳</span><span>Design-minded<br /><strong>developer</strong></span></div><span className="visual-index">PORTFOLIO · FRONTEND</span></div>
         <a className="scroll-cue" href="#featured-work"><span /> Scroll to explore</a>
       </section>
 
