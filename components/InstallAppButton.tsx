@@ -9,19 +9,13 @@ type InstallPromptEvent = Event & {
 
 export default function InstallAppButton() {
   const [installPrompt, setInstallPrompt] = useState<InstallPromptEvent | null>(null)
-  const [installed, setInstalled] = useState(false)
 
   useEffect(() => {
-    const isStandalone = window.matchMedia('(display-mode: standalone)').matches
-      || ('standalone' in navigator && navigator.standalone === true)
-    setInstalled(isStandalone)
-
     const handlePrompt = (event: Event) => {
       event.preventDefault()
       setInstallPrompt(event as InstallPromptEvent)
     }
     const handleInstalled = () => {
-      setInstalled(true)
       setInstallPrompt(null)
     }
 
@@ -33,7 +27,7 @@ export default function InstallAppButton() {
     }
   }, [])
 
-  if (installed || !installPrompt) return null
+  if (!installPrompt) return null
 
   const install = async () => {
     await installPrompt.prompt()

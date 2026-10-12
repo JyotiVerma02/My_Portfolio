@@ -10,6 +10,7 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow"><span className="availability-dot" /> Frontend developer <span className="eyebrow-divider">·</span> India</p>
           <h1>Thoughtful interfaces.<br /><span>Built for people.</span></h1>
+          <span className="hero-signature-dots" aria-hidden="true"><i /><i /><i /></span>
           <p className="hero-description">I&apos;m Jyoti, a frontend developer building responsive, reliable web experiences with React, Next.js, and TypeScript.</p>
           <div className="hero-actions"><Link href="/projects" className="btn btn-primary">Explore my work <span aria-hidden="true">↘</span></Link><Link href="/contact" className="text-link">Get in touch <span aria-hidden="true">↗</span></Link></div>
           <div className="hero-stack" aria-label="Core technologies">{['React', 'Next.js', 'TypeScript', 'Tailwind CSS'].map((tech) => <span key={tech}>{tech}</span>)}</div>
