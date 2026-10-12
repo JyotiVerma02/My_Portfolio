@@ -14,4 +14,4 @@ For a release APK suitable for distribution, use **Build > Generate Signed Bundl
 
 ## Download an APK from GitHub Actions
 
-Pushing this project to `main` starts the **Build Android APK** workflow. When it completes, open the workflow run in the repository's **Actions** tab and download the `jyoti-portfolio-debug-apk` artifact. The APK is a debug build for direct installation and is not a Play Store release build.
+Pushing this project to `main` starts the **Build Android APK** workflow. When it completes, open the workflow run in the repository's **Actions** tab and download the `jyoti-verma-portfolio-apk` artifact. After extracting the downloaded ZIP, the APK is named `Jyoti-Verma-Portfolio.apk`. It is a debug build for direct installation and is not a Play Store release build.
