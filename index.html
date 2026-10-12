@@ -4,63 +4,306 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>portfolio</title>
+  <title>Jyoti Verma | Frontend Developer</title> 
+
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+ 
 </head>
 
 <body>
+
+  <!-- Navbar -->
+
   <nav class="navbar">
-    <a href="#" class="logo">portfolio</a>
+
+    <a href="#" class="logo">Jyoti Verma</a>
+
     <ul>
-      <li class="active "><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Portfolio</a></li>
-      <li><a href="#">Service</a></li>
-      <li><a href="#">Contact</a></li>
+      <li class="active"><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
+    <a href="#contact" class="btn hire-me-btn">Hire Me</a>
   </nav>
-  <div class="bars-animation">
-    <div class="bar" style="--i:6;"></div>
-    <div class="bar" style="--i:5;"></div>
-    <div class="bar" style="--i:4;"></div>
-    <div class="bar" style="--i:3;"></div>
-    <div class="bar" style="--i:2;"></div>
-    <div class="bar" style="--i:1;"></div>
-  </div>
-  <section class="home ">
+
+  <div class="background-pattern"></div>
+  
+  <!-- Home -->
+
+  <section class="home" id="home">
+
     <div class="home-info">
+
+      <h4>Hello, I'm</h4>
       <h1>Jyoti Verma</h1>
-      <h2>I'M a
-        <span style="--i:3;"data-text="Frontend Developer"> Frontend Developer</span>
-        <span tyle="--i:2;"data-text="Web Developer"> Web Developer</span>
-        <span style="--i:1;"data-text="Full Stack Developer On the Rise"> Full Stack Developer on the rise </span>
-      </h2>
-      <p>“I create interactive, responsive, and visually polished web applications using modern frontend technologies.
-        With strong attention to detail and a passion for UI/UX, I’m on the path to becoming a Full Stack Developer.”
+      <h2 class="subtitle">Frontend Developer</h2>
+
+      <p>
+        Frontend Developer with 1+ year of experience building responsive and scalable web applications using React.js, Next.js, TypeScript, and Tailwind CSS. Experienced in API integration, Firebase services, reusable component development, performance optimization, and responsive design. Contributed to the successful delivery of multiple production applications while collaborating in Agile development environments.
       </p>
-      <div class="btn-sci">
-        <a href="#" class="btn">Downlode CV</a>
-        <div class="sci">
-          <a href="#"><i class='bx bxl-github'></i></a>
-          <a href="#"><i class='bx bxl-linkedin'></i></a>
-          <a href="#"><i class='bx bxl-twitter'></i></a>
-          <a href="#"><i class='bx bxl-instagram'></i></a>
+
+      <div class="tech-stack">
+        <div class="tech-badge">
+          <i class='bx bxl-javascript'></i><span>JavaScript</span>
         </div>
-      </div>
-    </div>
-    <div class="home-img">
-      <div class="img-box">
-        <div class="img-item">
-          <img src="my photo.png" alt="">
+        <div class="tech-badge">
+          <i class='bx bxl-react'></i><span>React</span>
+        </div>
+        <div class="tech-badge">
+          <i class='bx bxl-visual-studio'></i><span>Next.js</span>
+        </div>
+        <div class="tech-badge">
+          <i class='bx bxl-typescript'></i><span>TypeScript</span>
+        </div>
+        <div class="tech-badge">
+          <i class='bx bxl-tailwind-css'></i><span>Tailwind</span>
+        </div>
+        <div class="tech-badge">
+          <i class='bx bxl-firebase'></i><span>Firebase</span>
         </div>
       </div>
 
+      <div class="btn-sci">
+        <a href="#contact" class="btn btn-primary">Contact Me</a>
+        <a href="#projects" class="btn btn-secondary">View Projects</a>
+        <div class="sci">
+
+          <a href="https://github.com/JyotiVerma02" target="_blank" rel="noopener noreferrer">
+            <i class='bx bxl-github'></i>
+          </a>
+
+          <a href="https://linkedin.com/in/jyoti-verma-2933442a3" target="_blank" rel="noopener noreferrer">
+            <i class='bx bxl-linkedin'></i>
+          </a>
+
+          <a href="mailto:jyotiverma.feb9@gmail.com">
+            <i class='bx bx-envelope'></i>
+          </a>
+
+        </div>
+
+      </div>
+
     </div>
+
+    <div class="home-img">
+
+      <div class="img-box">
+
+        <div class="img-item">
+
+          <img src="public/Jyoti_image.png" alt="Jyoti Verma" />
+
+        </div>
+
+      </div>
+
+      <div class="experience-badge"><i class='bx bx-briefcase-alt-2'></i><span>1+ Years Experience</span></div>
+
+    </div>
+
   </section>
 
+  <!-- About -->
 
-  G
+  <section class="about" id="about">
+
+    <div class="section-title">
+      <h2>About Me</h2>
+    </div>
+
+    <div class="about-content">
+
+      <p>
+        I'm a Frontend Developer currently working at Webshlok Digital Services LLP. I specialize in developing modern web applications using React.js, Next.js, TypeScript, and Tailwind CSS.
+      </p>
+
+      <p>
+        I enjoy building responsive interfaces, integrating APIs, optimizing performance, and creating reusable UI components that improve development efficiency. My experience includes contributing to multiple production applications in Agile environments, focusing on clean code and seamless user experiences.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- Skills -->
+
+  <section class="skills" id="skills">
+
+    <div class="section-title">
+      <h2>Skills</h2>
+    </div>
+
+    <div class="skills-container">
+
+      <div class="skill-box">
+        <h3>Frontend</h3>
+
+        <p>
+          React.js, Next.js, JavaScript (ES6+), TypeScript, HTML5, CSS3, Tailwind CSS, Responsive Design, React Hooks, Context API, State Management
+        </p>
+      </div>
+
+      <div class="skill-box">
+        <h3>Backend</h3>
+
+        <p>
+          Firebase, REST APIs, Node.js, MySQL, SQL
+        </p>
+      </div>
+
+      <div class="skill-box">
+        <h3>Tools</h3>
+
+        <p>
+          Git, GitHub, VS Code,
+          Chrome DevTools, Figma
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Experience -->
+
+  <section class="experience" id="experience">
+
+    <div class="section-title">
+      <h2>Experience</h2>
+    </div>
+
+    <div class="experience-box">
+
+      <h3>Frontend Developer</h3>
+
+      <h4>Webshlok Digital Services LLP</h4>
+
+      <span>Feb 2025 - Present</span>
+
+      <ul>
+
+        <li>Delivered production-ready web applications using React.js, Next.js, TypeScript, and Tailwind CSS.</li>
+
+        <li>Created reusable UI components to support consistent interfaces and faster feature development.</li>
+
+        <li>Integrated REST APIs and Firebase services, and improved mobile responsiveness across client websites.</li>
+
+        <li>Worked in a five-member team using Git and GitHub to support regular releases.</li>
+
+      </ul>
+
+    </div>
+
+  </section>
+
+  <!-- Projects -->
+
+  <section class="projects" id="projects">
+
+    <div class="section-title">
+      <h2>Projects</h2>
+    </div>
+
+    <div class="project-container">
+
+      <div class="project-card">
+        <h3>Dynamic Portfolio</h3>
+
+        <p>
+          A personal portfolio website built with HTML, CSS, and JavaScript, featuring dynamic content, smooth scrolling, and responsive design to showcase skills and projects.
+        </p>
+        <button class="learn-more-btn" data-project="portfolio">Learn More</button>
+      </div>
+
+      <div class="project-card">
+        <h3>Travel IQ - Login Page</h3>
+
+        <p>
+          Designed a secure and responsive authentication portal with robust validation to strengthen input accuracy and improve user interaction flow for the Travel IQ system.
+        </p>
+        <button class="learn-more-btn" data-project="travel-iq-login">Learn More</button>
+      </div>
+
+      <div class="project-card">
+        <h3>Photocopy Order Management System</h3>
+
+        <p>
+          Automated print-order handling through a structured management platform to simplify tracking and streamline request processing for a local business.
+        </p>
+        <button class="learn-more-btn" data-project="photocopy">Learn More</button>
+      </div>
+
+      <div class="project-card">
+        <h3>Dongle ID Management System</h3>
+
+        <p>
+          Developed a dedicated system for managing and automating IRCTC dongle ID assignments, enhancing security and operational workflow for travel agents.
+        </p>
+        <button class="learn-more-btn" data-project="dongle">Learn More</button>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Project Modal -->
+  <div class="modal-overlay" id="project-modal-overlay">
+    <div class="modal-content" id="project-modal-content">
+      <span class="close-btn" id="close-modal-btn">&times;</span>
+      <h3 id="modal-title"></h3>
+      <div class="modal-body">
+        <p id="modal-description"></p>
+        <h4>Key Features:</h4>
+        <ul id="modal-features"></ul>
+        <h4>Technologies Used:</h4>
+        <p id="modal-tech"></p>
+      </div>
+      <div class="modal-links" id="modal-links">
+        <!-- Links will be populated by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact -->
+
+  <section class="contact" id="contact">
+
+    <div class="section-title">
+      <h2>Contact Me</h2>
+    </div>
+
+    <div class="contact-content">
+
+      <p class="contact-intro">
+        I'm currently looking for new opportunities and my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+      </p>
+
+      <div class="contact-items">
+        <a href="mailto:jyotiverma.feb9@gmail.com" class="contact-item">
+          <i class='bx bx-envelope'></i>
+          <span>jyotiverma.feb9@gmail.com</span>
+        </a>
+        <a href="https://linkedin.com/in/jyoti-verma-2933442a3" target="_blank" rel="noopener noreferrer" class="contact-item">
+          <i class='bx bxl-linkedin'></i>
+          <span>LinkedIn</span>
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="script.js"></script>
+
 </body>
 
 </html>

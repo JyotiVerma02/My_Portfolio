@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="clay" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f2c5a8" />
+      <stop offset="1" stop-color="#d99570" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="19" fill="#211914" />
+  <rect x="3" y="3" width="58" height="58" rx="17" fill="none" stroke="#e5ad8d" stroke-opacity=".35" />
+  <text x="32" y="43" fill="url(#clay)" font-family="Arial, sans-serif" font-size="31" font-weight="700" letter-spacing="-3" text-anchor="middle">JV</text>
+</svg>
