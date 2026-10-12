@@ -30,6 +30,8 @@ main, section, article, aside { min-width: 0; }
 .ambient { position: fixed; z-index: -1; width: 340px; aspect-ratio: 1; border-radius: 50%; filter: blur(105px); opacity: .12; pointer-events: none; }
 .ambient-one { top: 20%; right: -210px; background: #c28462; }
 .ambient-two { top: 65%; left: -240px; background: #955c43; }
+.cursor-glow { position: fixed; z-index: 150; top: 0; left: 0; width: 19px; height: 19px; border: 1px solid rgba(255, 220, 195, .72); border-radius: 50%; background: rgba(229, 173, 141, .2); box-shadow: 0 0 10px 3px rgba(229, 173, 141, .35), 0 0 32px 8px rgba(202, 135, 98, .18); opacity: 0; pointer-events: none; will-change: transform; transition: opacity .18s ease; }
+.cursor-glow.is-visible { opacity: 1; }
 
 .site-header { position: fixed; z-index: 100; top: 16px; left: 50%; width: min(calc(100% - 40px), 1320px); transform: translateX(-50%); }
 .navbar { display: flex; min-height: 70px; align-items: center; justify-content: space-between; gap: 26px; padding: 10px 22px 10px 26px; border: 1px solid rgba(255,224,202,.23); border-radius: 22px; background: linear-gradient(145deg, rgba(64,47,37,.98), rgba(38,28,22,.98) 54%, rgba(31,23,18,.98)); box-shadow: 12px 14px 30px rgba(0,0,0,.42), -5px -5px 15px rgba(255,226,204,.055), inset 2px 2px 5px rgba(255,236,221,.17), inset -4px -4px 8px rgba(0,0,0,.4); -webkit-backdrop-filter: blur(22px); backdrop-filter: blur(22px); }
@@ -293,9 +295,59 @@ main { position: relative; }
   .hero-stack span { padding-inline: 8px; }
   .contact-items { gap: 12px 16px; }
 }
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes portrait-drift {
+  0%, 100% { transform: translateY(0) rotate(2deg); }
+  50% { transform: translateY(-9px) rotate(1deg); }
+}
+@keyframes ambient-drift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(-18px, 14px, 0) scale(1.08); }
+}
+@keyframes orbit-turn {
+  from { transform: rotate(-18deg); }
+  to { transform: rotate(342deg); }
+}
+
+.hero-copy > * { animation: rise-in .7s both cubic-bezier(.2, .7, .2, 1); }
+.hero-copy > :nth-child(1) { animation-delay: .08s; }
+.hero-copy > :nth-child(2) { animation-delay: .16s; }
+.hero-copy > :nth-child(3) { animation-delay: .24s; }
+.hero-copy > :nth-child(4) { animation-delay: .32s; }
+.hero-copy > :nth-child(5) { animation-delay: .4s; }
+.hero-visual { animation: rise-in .9s .14s both cubic-bezier(.2, .7, .2, 1); }
+.inner-page .page-intro { animation: rise-in .7s both cubic-bezier(.2, .7, .2, 1); }
+.portrait-frame { animation: portrait-drift 6s 1s ease-in-out infinite; }
+.ambient-one { animation: ambient-drift 18s ease-in-out infinite; }
+.ambient-two { animation: ambient-drift 23s -8s ease-in-out infinite reverse; }
+.project-art-orbit { transition: border-color .3s ease; }
+.project-card:hover .project-art-orbit { animation: orbit-turn 12s linear infinite; border-color: rgba(242,196,166,.42); }
+.btn span, .text-link span, .header-cta span, .learn-more-btn span { display: inline-block; transition: transform .22s ease; }
+.btn:hover span, .text-link:hover span, .header-cta:hover span, .learn-more-btn:hover span { transform: translate(3px, -2px); }
+
+@supports (animation-timeline: view()) {
+  .home-featured .project-card, .home-experience > div, .home-contact,
+  .about-page-grid > *, .skills-page-grid .skill-box, .experience-page-card,
+  .projects-page-grid .project-card, .project-detail-layout, .contact-next,
+  .about-education .education-card {
+    animation: rise-in both cubic-bezier(.2, .7, .2, 1);
+    animation-timeline: view();
+    animation-range: entry 0% entry 38%;
+  }
+  .home-featured .project-card, .home-experience > div, .home-contact,
+  .about-page-grid > *, .skills-page-grid .skill-box, .experience-page-card,
+  .projects-page-grid .project-card, .project-detail-layout, .contact-next,
+  .about-education .education-card { animation-duration: auto; }
+}
+
 @media (hover: none) {
+  .cursor-glow { display: none; }
   .skill-box:hover, .project-card:hover, .hero-stack span:hover, .about-strengths span:hover, .header-cta:hover, .btn:hover, .footer-top-link:hover { transform: none; }
 }
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; animation-timeline: auto !important; }
 }

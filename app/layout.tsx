@@ -4,6 +4,7 @@ import type { ReactNode } from 'react'
 import SiteNav from '../components/SiteNav'
 import SiteFooter from '../components/SiteFooter'
 import PwaRegister from '../components/PwaRegister'
+import CursorGlow from '../components/CursorGlow'
 
 export const metadata: Metadata = {
   title: 'Jyoti Verma | Frontend Developer',
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         {children}
         <SiteFooter />
         <PwaRegister />
+        <CursorGlow />
       </body>
     </html>
   )
